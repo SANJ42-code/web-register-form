@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form | vtucode</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #ff6a00, #ee0979);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 500%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            padding: 50px; /* Increased padding */
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Increased gap for better spacing */
+            text-align: center;
+        }
+
+        .emoji-title {
+            font-size: 40px;
+            color: #ee0979;
+            margin-bottom: 10px;
+        }
+
+        .emoji-title span {
+            font-size: 50px; /* Emoji size */
+            display: block;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px; /* Increased gap between elements */
+        }
+
+        label {
+            font-size: 14px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select,
+        textarea {
+            padding: 15px; /* Increased padding for inputs */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 15px; /* Increased button padding */
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #ff6a00;
+            color: white;
+        }
+
+        input[type="reset"] {
+            background-color: #ddd;
+            color: #333;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 10px 0;
+        }
+
+        .social-login button {
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .social-login .facebook {
+            background-color: #4267B2;
+            color: white;
+        }
+
+        .social-login .google {
+            background-color: #DB4437;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="applicationForm" method="POST" action="registration.php">
+        
+    </form>
+
+
+    <div class="container">
+        <!-- Instagram Emoji and Text -->
+        <div class="emoji-title">
+            <span>📸</span> <!-- Instagram emoji -->
+            Instagram
+        </div>
+        <h2>Registration Form</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            </div>
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select id="country" name="country">
+                    <option value="usa">USA</option>
+                    <option value="canada">Canada</option>
+                    <option value="uk">UK</option>
+                    <option value="india">India</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+            </div>
+            <div class="social-login">
+                <button class="facebook">F</button>
+                <button class="google">G</button>
+            </div>
+            <input type="submit" value="Register">
+            <input type="reset" value="Reset">
+        </form>
+    </div>
+</body>
+
+</html>
